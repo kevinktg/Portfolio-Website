@@ -24,7 +24,10 @@ export const LoadingProvider = ({ children }: PropsWithChildren) => {
     setIsLoading,
     setLoading,
   };
-  useEffect(() => {}, [loading]);
+  // Automatically disable loading screen since we no longer load the 3-D model
+  useEffect(() => {
+    setIsLoading(false);
+  }, []);
 
   return (
     <LoadingContext.Provider value={value as LoadingType}>

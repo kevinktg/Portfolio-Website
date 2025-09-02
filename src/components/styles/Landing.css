@@ -244,6 +244,18 @@ h2.landing-info-h2 {
   top: 0;
   left: 0;
 }
+.hero-svg {
+  height: 85%;
+  max-height: 700px;
+  width: auto;
+  animation: heroPulse 12s ease-in-out infinite;
+  transform-origin: center;
+}
+@keyframes heroPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
 @media screen and (min-width: 500px) {
   .landing-circle2 {
     display: block;
